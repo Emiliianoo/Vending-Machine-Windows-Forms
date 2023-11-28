@@ -139,36 +139,44 @@
             // 
             // PaymentMenuBtn
             // 
-            this.PaymentMenuBtn.Location = new System.Drawing.Point(282, 339);
+            this.PaymentMenuBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PaymentMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PaymentMenuBtn.ForeColor = System.Drawing.Color.White;
+            this.PaymentMenuBtn.Location = new System.Drawing.Point(388, 292);
             this.PaymentMenuBtn.Name = "PaymentMenuBtn";
-            this.PaymentMenuBtn.Size = new System.Drawing.Size(87, 33);
+            this.PaymentMenuBtn.Size = new System.Drawing.Size(173, 57);
             this.PaymentMenuBtn.TabIndex = 9;
             this.PaymentMenuBtn.Text = "PAGAR";
-            this.PaymentMenuBtn.UseVisualStyleBackColor = true;
+            this.PaymentMenuBtn.UseVisualStyleBackColor = false;
             this.PaymentMenuBtn.Click += new System.EventHandler(this.PaymentMenuBtn_Click);
+            this.PaymentMenuBtn.MouseEnter += new System.EventHandler(this.PaymentMenuBtn_MouseEnter);
+            this.PaymentMenuBtn.MouseLeave += new System.EventHandler(this.PaymentMenuBtn_MouseLeave);
             // 
             // IDSelectorBtn
             // 
-            this.IDSelectorBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.IDSelectorBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.IDSelectorBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.IDSelectorBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IDSelectorBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IDSelectorBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.IDSelectorBtn.Location = new System.Drawing.Point(295, 106);
+            this.IDSelectorBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDSelectorBtn.ForeColor = System.Drawing.Color.White;
+            this.IDSelectorBtn.Location = new System.Drawing.Point(379, 129);
             this.IDSelectorBtn.Name = "IDSelectorBtn";
-            this.IDSelectorBtn.Size = new System.Drawing.Size(66, 142);
+            this.IDSelectorBtn.Size = new System.Drawing.Size(188, 90);
             this.IDSelectorBtn.TabIndex = 10;
-            this.IDSelectorBtn.Text = "ID Select";
+            this.IDSelectorBtn.Text = "Seleccionar producto";
+            this.IDSelectorBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.IDSelectorBtn.UseVisualStyleBackColor = false;
-            this.IDSelectorBtn.Visible = false;
             this.IDSelectorBtn.Click += new System.EventHandler(this.IDSelectorBtn_Click);
+            this.IDSelectorBtn.MouseEnter += new System.EventHandler(this.IDSelectorBtn_MouseEnter);
+            this.IDSelectorBtn.MouseLeave += new System.EventHandler(this.IDSelectorBtn_MouseLeave);
             // 
             // MaquinaExpendedora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(373, 666);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(573, 659);
             this.Controls.Add(this.IDSelectorBtn);
             this.Controls.Add(this.PaymentMenuBtn);
             this.Controls.Add(this.DrPepperCanID);
@@ -180,8 +188,8 @@
             this.Controls.Add(this.CokeCanID);
             this.Controls.Add(this.CokeCan_Img);
             this.Controls.Add(this.DrPepperCan_Img);
-            this.MaximumSize = new System.Drawing.Size(395, 722);
-            this.MinimumSize = new System.Drawing.Size(395, 722);
+            this.MaximumSize = new System.Drawing.Size(595, 715);
+            this.MinimumSize = new System.Drawing.Size(595, 715);
             this.Name = "MaquinaExpendedora";
             this.Text = "Maquina Expendedora";
             this.Load += new System.EventHandler(this.MaquinaExpendedora_Load);
