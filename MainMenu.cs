@@ -217,6 +217,7 @@ namespace MaquinaExpendedora
             {
                 MessageBox.Show("El producto seleccionado no se encuentra disponible.", "¡Error!",
                                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UnlockID();
                 return;
             }
 
@@ -228,6 +229,7 @@ namespace MaquinaExpendedora
 
                 TotalAmountDeposited = 0;
                 TotalDepositedLabel.Text = "$0.00";
+                UnlockID();
 
                 return;
             }
