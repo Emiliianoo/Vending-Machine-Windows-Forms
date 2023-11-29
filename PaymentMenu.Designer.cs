@@ -104,7 +104,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(344, 675);
+            this.label2.Location = new System.Drawing.Point(344, 651);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(246, 29);
@@ -117,7 +117,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(164, 675);
+            this.label1.Location = new System.Drawing.Point(164, 651);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 29);
@@ -130,7 +130,7 @@
             this.AcceptButtonCash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AcceptButtonCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButtonCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptButtonCash.Location = new System.Drawing.Point(428, 586);
+            this.AcceptButtonCash.Location = new System.Drawing.Point(428, 567);
             this.AcceptButtonCash.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AcceptButtonCash.Name = "AcceptButtonCash";
             this.AcceptButtonCash.Size = new System.Drawing.Size(82, 85);
@@ -147,7 +147,7 @@
             this.DeleteButtonCash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteButtonCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButtonCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButtonCash.Location = new System.Drawing.Point(168, 586);
+            this.DeleteButtonCash.Location = new System.Drawing.Point(168, 567);
             this.DeleteButtonCash.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DeleteButtonCash.Name = "DeleteButtonCash";
             this.DeleteButtonCash.Size = new System.Drawing.Size(82, 85);
@@ -318,7 +318,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1103, 688);
+            this.ClientSize = new System.Drawing.Size(454, 688);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CashPaymentPanel);

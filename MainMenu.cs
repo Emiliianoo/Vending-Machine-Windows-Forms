@@ -35,7 +35,7 @@ namespace MaquinaExpendedora
         public void AddCashAmount(double amount)
         {
             TotalAmountDeposited += amount;
-            TotalDepositedLabel.Text = $"${TotalAmountDeposited.ToString()}.00";
+            TotalDepositedLabel.Text = $"${TotalAmountDeposited.ToString()}";
             Console.WriteLine(TotalAmountDeposited);
         }
 
@@ -213,11 +213,11 @@ namespace MaquinaExpendedora
             // If the user has not deposited enough money
             if (MainControl.TotalAmountDeposited < itemPrice)
             {
-                MessageBox.Show($"El dinero ingresado no es suficiente para comprar el producto seleccionado. Devolviendo: ${TotalAmountDeposited}", "¡Error!",
+                MessageBox.Show($"El dinero ingresado no es suficiente para comprar el producto seleccionado. Devolviendo: ${MainControl.TotalAmountDeposited}", "¡Error!",
                                                                       MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                TotalAmountDeposited = 0;
-                TotalDepositedLabel.Text = "$0.00";
+                MainControl.ClearDepositedAmount();
+                TotalDepositedLabel.Text = "$0";
                 MainControl.ToggleIDLock();
 
                 return;
@@ -240,7 +240,7 @@ namespace MaquinaExpendedora
             //Refresh all the labels
             string id = MainControl.ID;
             CurrentID.Text = id;
-            TotalDepositedLabel.Text = $"${MainControl.TotalAmountDeposited.ToString()}.00";
+            TotalDepositedLabel.Text = $"${MainControl.TotalAmountDeposited.ToString()}";
         }
     }
 }

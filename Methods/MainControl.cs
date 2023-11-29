@@ -15,7 +15,7 @@ namespace MaquinaExpendedora.Methods
         public static double  TotalAmountDeposited
         {
             get => _totalAmountDeposited;
-            set
+            private set
             {
                 _totalAmountDeposited = value;
                 Console.WriteLine(_totalAmountDeposited);
@@ -63,6 +63,11 @@ namespace MaquinaExpendedora.Methods
         {
             TotalAmountDeposited += amount;
             Console.WriteLine(TotalAmountDeposited);
+        }
+
+        public static void ClearDepositedAmount()
+        {
+            TotalAmountDeposited = 0;
         }
 
         public static void ModifyID(string btnChar)
