@@ -7,29 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaquinaExpendedora.Methods;
 
 namespace MaquinaExpendedora
 {
     public partial class MainMenu : Form
     {
         bool toggleIDMenu = false;
-        bool IDLocked = false;
-        private string ID = "";
         private double TotalAmountDeposited = 0;
         private PaymentMenu paymentMenu = null;
-        private Dictionary<string, (double Price, int Amount, string Name)> _itemsInfo = new Dictionary<string, (double, int, string)>
-        {
-            { "1A", (21.00, 5, "Coca Cola") },
-            { "2A", (20.00, 2, "Sprite") },
-            { "3A", (20.00, 1, "Pepsi") },
-            { "1B", (23.00, 3, "DrPepper") },
-            { "2B", (22.00, 3, "Ruffles") },
-            { "3B", (23.00, 2, "Sabritas") },
-            { "1C", (25.00, 1, "Gansito") },
-            { "2C", (24.00, 5, "Barritas") },
-            { "3C", (25.00, 3, "Chocorroles") }
-        };
 
+        public void ModifyIDlabel()
+        {
+            CurrentID.Text = MainControl.ID;
+        }
+
+        public void ModifyDepositedLabel()
+        {
+            TotalDepositedLabel.Text = $"${MainControl.TotalAmountDeposited}";
+        }
 
         public MainMenu()
         {
@@ -50,15 +46,9 @@ namespace MaquinaExpendedora
 
         private void PaymentMenuBtn_Click(object sender, EventArgs e)
         {
-            if(IDLocked) return; //Processing payment so return
+            if (MainControl.PurchaseOnGoing()) return;
 
-            if (!_itemsInfo.ContainsKey(ID) && ID != "")
-            {
-                MessageBox.Show("El ID proporcionado no es válido.", "¡Error!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; //if ID is not valid then return
-            }
-
+            // Check if the form is already open
             if (paymentMenu == null || paymentMenu.IsDisposed)
             {
                 // If not, create a new instance and show it
@@ -97,17 +87,17 @@ namespace MaquinaExpendedora
             toggleIDMenu = !toggleIDMenu;
 
             Size = new Size(
-                               toggleIDMenu ? 750 : 460,
-                                              Size.Height);
+                toggleIDMenu ? 750 : 460,
+                Size.Height);
 
             IDSelectorPanel.Visible = toggleIDMenu;
         }
 
         private void IDSelectorBtn_Click(object sender, EventArgs e)
         {
-            if(IDLocked) return; //Processing payment so return
+            if (MainControl.PurchaseOnGoing()) return;
 
-            if(TotalAmountDeposited <= 0)
+            if (MainControl.TotalAmountDeposited <= 0)
             {
                 MessageBox.Show("Porfavor de ingresar dinero antes de seleccionar un ID.", "¡Error!",
                                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -117,9 +107,9 @@ namespace MaquinaExpendedora
             ToggleIDMenu();
         }
 
-                private bool IDFull()
+        private bool IDFull()
         {
-            if (ID.Length == 2) return true;
+            if (MainControl.ID.Length == 2) return true;
             return false;
         }
 
@@ -155,16 +145,14 @@ namespace MaquinaExpendedora
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            if(IDLocked) return;
-            ID = "";
-            CurrentID.Text = ID;
+            MainControl.ClearID();
+            CurrentID.Text = MainControl.ID;
         }
 
         private void ModifyID(string btnText)
         {
-            if(IDFull() || IDLocked) return;
-            ID += btnText;
-            CurrentID.Text = ID;
+            MainControl.ModifyID(btnText);
+            CurrentID.Text = MainControl.ID;
         }
 
         private void DeleteButton_MouseEnter(object sender, EventArgs e)
@@ -189,69 +177,70 @@ namespace MaquinaExpendedora
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
-            IDLocked = true;
-            if (ID == "")
+            MainControl.ToggleIDLock();
+            if (MainControl.ID == "")
             {
                 MessageBox.Show("Porfavor de ingresar un ID antes de continuar.", "¡Error!",
                                                                       MessageBoxButtons.OK, MessageBoxIcon.Error);
-                UnlockID();
+                MainControl.ToggleIDLock();
                 return;
             }
 
-            if(!_itemsInfo.ContainsKey(ID))
+            // If the ID is not valid
+            if(!MainControl.IDExists())
             {
                 MessageBox.Show("El ID proporcionado no es válido.", "¡Error!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                UnlockID();
-                ID = "";
+                MainControl.ToggleIDLock();
+                MainControl.ClearID();
                 return;
             }
 
 
-            double itemPrice = _itemsInfo[ID].Price;
-            int itemAmount = _itemsInfo[ID].Amount;
-            string itemName = _itemsInfo[ID].Name;
+            double itemPrice = MainControl.getItemPrice();
+            int itemAmount = MainControl.getItemAmount();
+            string itemName = MainControl.getItemName();
             
             // If the item is not available
             if (itemAmount <= 0)
             {
                 MessageBox.Show("El producto seleccionado no se encuentra disponible.", "¡Error!",
                                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                UnlockID();
+                MainControl.ToggleIDLock();
                 return;
             }
 
             // If the user has not deposited enough money
-            if (TotalAmountDeposited < itemPrice)
+            if (MainControl.TotalAmountDeposited < itemPrice)
             {
                 MessageBox.Show($"El dinero ingresado no es suficiente para comprar el producto seleccionado. Devolviendo: ${TotalAmountDeposited}", "¡Error!",
                                                                       MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 TotalAmountDeposited = 0;
                 TotalDepositedLabel.Text = "$0.00";
-                UnlockID();
+                MainControl.ToggleIDLock();
 
                 return;
             }
 
-            ProcessPayment processPayment = new ProcessPayment(this, TotalAmountDeposited, itemPrice, itemName, ID);
+            ProcessPayment processPayment = new ProcessPayment(this);
             processPayment.Show();
-        }
-
-        public void RemoveItem(string ID)
-        {
-            _itemsInfo[ID] = (_itemsInfo[ID].Price, _itemsInfo[ID].Amount - 1, _itemsInfo[ID].Name);
-        }
-
-        public void UnlockID()
-        {
-            IDLocked = false;
         }
 
         public void ClearID()
         {
-            ID = "";
-            CurrentID.Text = ID;
-        }   
+            if(MainControl.PurchaseOnGoing()) return;
+
+            MainControl.ClearID();
+            CurrentID.Text = "";
+        }
+
+        private void MainMenu_Enter(object sender, EventArgs e)
+        {
+            //Refresh all the labels
+            string id = MainControl.ID;
+            CurrentID.Text = id;
+            TotalDepositedLabel.Text = $"${MainControl.TotalAmountDeposited.ToString()}.00";
+        }
     }
 }
