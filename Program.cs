@@ -16,7 +16,7 @@ namespace MaquinaExpendedora
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MaquinaExpendedora());
+            Application.Run(new MainMenu());
         }
     }
 }
