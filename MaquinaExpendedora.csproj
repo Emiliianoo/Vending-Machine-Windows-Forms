@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Methods\MainControl.cs" />
     <Compile Include="ProcessPayment.cs">
       <SubType>Form</SubType>
     </Compile>

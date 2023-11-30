@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaquinaExpendedora.Methods;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -125,11 +126,16 @@ namespace MaquinaExpendedora
 
         private void AcceptButtonCash_Click(object sender, EventArgs e)
         {
-            TotalAmountDeposited += CashAmount;
-            this.MenuPrincipal.AddCashAmount(TotalAmountDeposited);
+            MainControl.AddCashAmount(CashAmount);
             MessageBox.Show($"Se ha depositado ${CashAmount.ToString()}.00 de forma correcta.", "Depósito con éxito.",
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MenuPrincipal.ModifyDepositedLabel();
             this.Close();
+        }
+
+        private void PaymentMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

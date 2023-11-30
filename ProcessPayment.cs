@@ -7,17 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaquinaExpendedora.Methods;
 
 namespace MaquinaExpendedora
 {
     public partial class ProcessPayment : Form
     {
         private MainMenu menu = null;
-        private string ID = "";
-        private double TotalAmountDeposited = 0;
-        private double itemPrice = 0;
-        private int itemAmount = 0;
-        private string itemName = "";
 
         public ProcessPayment()
         {
@@ -25,15 +21,11 @@ namespace MaquinaExpendedora
             timer1.Start();
         }
 
-        public ProcessPayment(Form callingForm, double TotalAmountDeposited, double itemPrice, string itemName, string ID)
+        public ProcessPayment(Form callingForm)
         {
             menu = callingForm as MainMenu;
             InitializeComponent();
             timer1.Start();
-            this.ID = ID;
-            this.TotalAmountDeposited = TotalAmountDeposited;
-            this.itemPrice = itemPrice;
-            this.itemName = itemName;
         }
 
         private async void timer1_Tick(object sender, EventArgs e)
@@ -43,17 +35,17 @@ namespace MaquinaExpendedora
             {
                 timer1.Stop();
                 await Task.Delay(1000);
-                double change = TotalAmountDeposited - itemPrice;
-                menu.RemoveItem(ID);
-                menu.AddCashAmount(-itemPrice);
+                double change = MainControl.TotalAmountDeposited - MainControl.getItemPrice();
+                MainControl.DispenseItem();
+                MainControl.SubtractCashAmount(MainControl.getItemPrice());
                 if (change > 0)
                 {
                     // Ask if they want to withdraw the change
-                    DialogResult dialogResult = MessageBox.Show($"Se ha vendido un {itemName} con éxito. ¿Desea seguir comprando? Cambio actual: ${change}", "Retiro con éxito.",
+                    DialogResult dialogResult = MessageBox.Show($"Se ha vendido un {MainControl.getItemName()} con éxito. ¿Desea seguir comprando? Cambio actual: ${change}", "Retiro con éxito.",
                                                               MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (dialogResult == DialogResult.No)
                     {
-                        menu.AddCashAmount(-change);
+                        MainControl.SubtractCashAmount(change);
                         MessageBox.Show($"Se ha retirado el cambio de ${change.ToString()} de forma correcta.", "Retiro con éxito.",
                                                                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
                         menu.ToggleIDMenu();
@@ -62,12 +54,15 @@ namespace MaquinaExpendedora
                 }
                 else
                 {
-                    MessageBox.Show($"Se ha vendido un {itemName} con éxito.", "Retiro con éxito.",
+                    MessageBox.Show($"Se ha vendido un {MainControl.getItemName()} con éxito.", "Retiro con éxito.",
                                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                menu.UnlockID();
-                menu.ClearID();
+                MainControl.ToggleIDLock();
+                MainControl.ClearID();
+                menu.ModifyIDlabel();
+                menu.ModifyDepositedLabel();
+
                 this.Close();
             }
             progressBar.Increment(20);

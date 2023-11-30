@@ -65,9 +65,8 @@
             // 
             this.DrPepperCan_Img.Image = ((System.Drawing.Image)(resources.GetObject("DrPepperCan_Img.Image")));
             this.DrPepperCan_Img.Location = new System.Drawing.Point(0, 0);
-            this.DrPepperCan_Img.Margin = new System.Windows.Forms.Padding(2);
             this.DrPepperCan_Img.Name = "DrPepperCan_Img";
-            this.DrPepperCan_Img.Size = new System.Drawing.Size(249, 430);
+            this.DrPepperCan_Img.Size = new System.Drawing.Size(374, 662);
             this.DrPepperCan_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DrPepperCan_Img.TabIndex = 0;
             this.DrPepperCan_Img.TabStop = false;
@@ -75,10 +74,9 @@
             // CokeCan_Img
             // 
             this.CokeCan_Img.Image = ((System.Drawing.Image)(resources.GetObject("CokeCan_Img.Image")));
-            this.CokeCan_Img.Location = new System.Drawing.Point(23, 24);
-            this.CokeCan_Img.Margin = new System.Windows.Forms.Padding(2);
+            this.CokeCan_Img.Location = new System.Drawing.Point(34, 37);
             this.CokeCan_Img.Name = "CokeCan_Img";
-            this.CokeCan_Img.Size = new System.Drawing.Size(35, 54);
+            this.CokeCan_Img.Size = new System.Drawing.Size(52, 83);
             this.CokeCan_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CokeCan_Img.TabIndex = 1;
             this.CokeCan_Img.TabStop = false;
@@ -86,10 +84,9 @@
             // SpriteCan_Img
             // 
             this.SpriteCan_Img.Image = ((System.Drawing.Image)(resources.GetObject("SpriteCan_Img.Image")));
-            this.SpriteCan_Img.Location = new System.Drawing.Point(77, 24);
-            this.SpriteCan_Img.Margin = new System.Windows.Forms.Padding(2);
+            this.SpriteCan_Img.Location = new System.Drawing.Point(116, 37);
             this.SpriteCan_Img.Name = "SpriteCan_Img";
-            this.SpriteCan_Img.Size = new System.Drawing.Size(35, 54);
+            this.SpriteCan_Img.Size = new System.Drawing.Size(52, 83);
             this.SpriteCan_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SpriteCan_Img.TabIndex = 3;
             this.SpriteCan_Img.TabStop = false;
@@ -98,10 +95,9 @@
             // 
             this.CokeCanID.AutoSize = true;
             this.CokeCanID.BackColor = System.Drawing.Color.IndianRed;
-            this.CokeCanID.Location = new System.Drawing.Point(31, 69);
-            this.CokeCanID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CokeCanID.Location = new System.Drawing.Point(46, 106);
             this.CokeCanID.Name = "CokeCanID";
-            this.CokeCanID.Size = new System.Drawing.Size(20, 13);
+            this.CokeCanID.Size = new System.Drawing.Size(29, 20);
             this.CokeCanID.TabIndex = 2;
             this.CokeCanID.Text = "1A";
             // 
@@ -109,20 +105,18 @@
             // 
             this.SpriteCanID.AutoSize = true;
             this.SpriteCanID.BackColor = System.Drawing.Color.IndianRed;
-            this.SpriteCanID.Location = new System.Drawing.Point(85, 69);
-            this.SpriteCanID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SpriteCanID.Location = new System.Drawing.Point(128, 106);
             this.SpriteCanID.Name = "SpriteCanID";
-            this.SpriteCanID.Size = new System.Drawing.Size(20, 13);
+            this.SpriteCanID.Size = new System.Drawing.Size(29, 20);
             this.SpriteCanID.TabIndex = 4;
             this.SpriteCanID.Text = "2A";
             // 
             // PepsiCan_Img
             // 
             this.PepsiCan_Img.Image = ((System.Drawing.Image)(resources.GetObject("PepsiCan_Img.Image")));
-            this.PepsiCan_Img.Location = new System.Drawing.Point(127, 24);
-            this.PepsiCan_Img.Margin = new System.Windows.Forms.Padding(2);
+            this.PepsiCan_Img.Location = new System.Drawing.Point(190, 37);
             this.PepsiCan_Img.Name = "PepsiCan_Img";
-            this.PepsiCan_Img.Size = new System.Drawing.Size(35, 54);
+            this.PepsiCan_Img.Size = new System.Drawing.Size(52, 83);
             this.PepsiCan_Img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PepsiCan_Img.TabIndex = 5;
             this.PepsiCan_Img.TabStop = false;
@@ -131,20 +125,18 @@
             // 
             this.PepsiCanID.AutoSize = true;
             this.PepsiCanID.BackColor = System.Drawing.Color.IndianRed;
-            this.PepsiCanID.Location = new System.Drawing.Point(136, 69);
-            this.PepsiCanID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.PepsiCanID.Location = new System.Drawing.Point(204, 106);
             this.PepsiCanID.Name = "PepsiCanID";
-            this.PepsiCanID.Size = new System.Drawing.Size(20, 13);
+            this.PepsiCanID.Size = new System.Drawing.Size(29, 20);
             this.PepsiCanID.TabIndex = 6;
             this.PepsiCanID.Text = "3A";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(23, 84);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 129);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 49);
+            this.pictureBox2.Size = new System.Drawing.Size(52, 75);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -153,10 +145,9 @@
             // 
             this.DrPepperCanID.AutoSize = true;
             this.DrPepperCanID.BackColor = System.Drawing.Color.IndianRed;
-            this.DrPepperCanID.Location = new System.Drawing.Point(31, 124);
-            this.DrPepperCanID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DrPepperCanID.Location = new System.Drawing.Point(46, 191);
             this.DrPepperCanID.Name = "DrPepperCanID";
-            this.DrPepperCanID.Size = new System.Drawing.Size(20, 13);
+            this.DrPepperCanID.Size = new System.Drawing.Size(29, 20);
             this.DrPepperCanID.TabIndex = 8;
             this.DrPepperCanID.Text = "1B";
             // 
@@ -165,10 +156,9 @@
             this.PaymentMenuBtn.BackColor = System.Drawing.Color.Silver;
             this.PaymentMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PaymentMenuBtn.ForeColor = System.Drawing.Color.Black;
-            this.PaymentMenuBtn.Location = new System.Drawing.Point(279, 84);
-            this.PaymentMenuBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.PaymentMenuBtn.Location = new System.Drawing.Point(418, 129);
             this.PaymentMenuBtn.Name = "PaymentMenuBtn";
-            this.PaymentMenuBtn.Size = new System.Drawing.Size(137, 54);
+            this.PaymentMenuBtn.Size = new System.Drawing.Size(206, 83);
             this.PaymentMenuBtn.TabIndex = 9;
             this.PaymentMenuBtn.Text = "Ingresar Dinero o Pagar";
             this.PaymentMenuBtn.UseVisualStyleBackColor = false;
@@ -183,10 +173,9 @@
             this.IDSelectorBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IDSelectorBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDSelectorBtn.ForeColor = System.Drawing.Color.Black;
-            this.IDSelectorBtn.Location = new System.Drawing.Point(279, 22);
-            this.IDSelectorBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.IDSelectorBtn.Location = new System.Drawing.Point(418, 34);
             this.IDSelectorBtn.Name = "IDSelectorBtn";
-            this.IDSelectorBtn.Size = new System.Drawing.Size(137, 58);
+            this.IDSelectorBtn.Size = new System.Drawing.Size(206, 89);
             this.IDSelectorBtn.TabIndex = 10;
             this.IDSelectorBtn.Text = "Seleccionar producto";
             this.IDSelectorBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -207,9 +196,10 @@
             this.IDSelectorPanel.Controls.Add(this.ID_3);
             this.IDSelectorPanel.Controls.Add(this.ID_2);
             this.IDSelectorPanel.Controls.Add(this.ID_1);
-            this.IDSelectorPanel.Location = new System.Drawing.Point(465, 24);
+            this.IDSelectorPanel.Location = new System.Drawing.Point(698, 37);
+            this.IDSelectorPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IDSelectorPanel.Name = "IDSelectorPanel";
-            this.IDSelectorPanel.Size = new System.Drawing.Size(257, 385);
+            this.IDSelectorPanel.Size = new System.Drawing.Size(386, 592);
             this.IDSelectorPanel.TabIndex = 11;
             this.IDSelectorPanel.Visible = false;
             // 
@@ -219,9 +209,10 @@
             this.AcceptButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AcceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AcceptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptButton.Location = new System.Drawing.Point(146, 272);
+            this.AcceptButton.Location = new System.Drawing.Point(219, 418);
+            this.AcceptButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(55, 55);
+            this.AcceptButton.Size = new System.Drawing.Size(82, 85);
             this.AcceptButton.TabIndex = 15;
             this.AcceptButton.Text = "✓";
             this.AcceptButton.UseVisualStyleBackColor = false;
@@ -235,9 +226,10 @@
             this.DeleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButton.Location = new System.Drawing.Point(59, 272);
+            this.DeleteButton.Location = new System.Drawing.Point(88, 418);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(55, 55);
+            this.DeleteButton.Size = new System.Drawing.Size(82, 85);
             this.DeleteButton.TabIndex = 14;
             this.DeleteButton.Text = "🗑";
             this.DeleteButton.UseVisualStyleBackColor = false;
@@ -250,10 +242,11 @@
             this.CurrentID.AutoSize = true;
             this.CurrentID.BackColor = System.Drawing.Color.Azure;
             this.CurrentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentID.Location = new System.Drawing.Point(81, 41);
-            this.CurrentID.MinimumSize = new System.Drawing.Size(100, 35);
+            this.CurrentID.Location = new System.Drawing.Point(122, 63);
+            this.CurrentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CurrentID.MinimumSize = new System.Drawing.Size(150, 54);
             this.CurrentID.Name = "CurrentID";
-            this.CurrentID.Size = new System.Drawing.Size(100, 35);
+            this.CurrentID.Size = new System.Drawing.Size(150, 54);
             this.CurrentID.TabIndex = 13;
             this.CurrentID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -263,9 +256,10 @@
             this.text1.BackColor = System.Drawing.Color.Transparent;
             this.text1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text1.ForeColor = System.Drawing.Color.White;
-            this.text1.Location = new System.Drawing.Point(65, 19);
+            this.text1.Location = new System.Drawing.Point(98, 29);
+            this.text1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.text1.Name = "text1";
-            this.text1.Size = new System.Drawing.Size(136, 18);
+            this.text1.Size = new System.Drawing.Size(212, 29);
             this.text1.TabIndex = 12;
             this.text1.Text = "ID Seleccionado:";
             // 
@@ -275,9 +269,10 @@
             this.ID_C.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ID_C.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ID_C.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_C.Location = new System.Drawing.Point(187, 172);
+            this.ID_C.Location = new System.Drawing.Point(280, 265);
+            this.ID_C.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_C.Name = "ID_C";
-            this.ID_C.Size = new System.Drawing.Size(55, 55);
+            this.ID_C.Size = new System.Drawing.Size(82, 85);
             this.ID_C.TabIndex = 6;
             this.ID_C.Text = "C";
             this.ID_C.UseVisualStyleBackColor = false;
@@ -289,9 +284,10 @@
             this.ID_B.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ID_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ID_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_B.Location = new System.Drawing.Point(103, 172);
+            this.ID_B.Location = new System.Drawing.Point(154, 265);
+            this.ID_B.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_B.Name = "ID_B";
-            this.ID_B.Size = new System.Drawing.Size(55, 55);
+            this.ID_B.Size = new System.Drawing.Size(82, 85);
             this.ID_B.TabIndex = 5;
             this.ID_B.Text = "B";
             this.ID_B.UseVisualStyleBackColor = false;
@@ -303,9 +299,10 @@
             this.ID_A.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ID_A.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ID_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_A.Location = new System.Drawing.Point(17, 172);
+            this.ID_A.Location = new System.Drawing.Point(26, 265);
+            this.ID_A.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_A.Name = "ID_A";
-            this.ID_A.Size = new System.Drawing.Size(55, 55);
+            this.ID_A.Size = new System.Drawing.Size(82, 85);
             this.ID_A.TabIndex = 4;
             this.ID_A.Text = "A";
             this.ID_A.UseVisualStyleBackColor = false;
@@ -317,9 +314,10 @@
             this.ID_3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ID_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ID_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_3.Location = new System.Drawing.Point(187, 100);
+            this.ID_3.Location = new System.Drawing.Point(280, 154);
+            this.ID_3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_3.Name = "ID_3";
-            this.ID_3.Size = new System.Drawing.Size(55, 55);
+            this.ID_3.Size = new System.Drawing.Size(82, 85);
             this.ID_3.TabIndex = 3;
             this.ID_3.Text = "3";
             this.ID_3.UseVisualStyleBackColor = false;
@@ -331,9 +329,10 @@
             this.ID_2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ID_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ID_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_2.Location = new System.Drawing.Point(103, 100);
+            this.ID_2.Location = new System.Drawing.Point(154, 154);
+            this.ID_2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_2.Name = "ID_2";
-            this.ID_2.Size = new System.Drawing.Size(55, 55);
+            this.ID_2.Size = new System.Drawing.Size(82, 85);
             this.ID_2.TabIndex = 2;
             this.ID_2.Text = "2";
             this.ID_2.UseVisualStyleBackColor = false;
@@ -345,9 +344,10 @@
             this.ID_1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ID_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ID_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_1.Location = new System.Drawing.Point(17, 100);
+            this.ID_1.Location = new System.Drawing.Point(26, 154);
+            this.ID_1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_1.Name = "ID_1";
-            this.ID_1.Size = new System.Drawing.Size(55, 55);
+            this.ID_1.Size = new System.Drawing.Size(82, 85);
             this.ID_1.TabIndex = 1;
             this.ID_1.Text = "1";
             this.ID_1.UseVisualStyleBackColor = false;
@@ -359,9 +359,10 @@
             this.TotalAmountHeader.BackColor = System.Drawing.Color.Transparent;
             this.TotalAmountHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalAmountHeader.ForeColor = System.Drawing.Color.White;
-            this.TotalAmountHeader.Location = new System.Drawing.Point(254, 344);
+            this.TotalAmountHeader.Location = new System.Drawing.Point(381, 529);
+            this.TotalAmountHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalAmountHeader.Name = "TotalAmountHeader";
-            this.TotalAmountHeader.Size = new System.Drawing.Size(178, 18);
+            this.TotalAmountHeader.Size = new System.Drawing.Size(277, 29);
             this.TotalAmountHeader.TabIndex = 16;
             this.TotalAmountHeader.Text = "Cantidad Despositada:";
             this.TotalAmountHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -372,21 +373,22 @@
             this.TotalDepositedLabel.BackColor = System.Drawing.Color.White;
             this.TotalDepositedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalDepositedLabel.ForeColor = System.Drawing.Color.Black;
-            this.TotalDepositedLabel.Location = new System.Drawing.Point(258, 370);
-            this.TotalDepositedLabel.MaximumSize = new System.Drawing.Size(170, 25);
-            this.TotalDepositedLabel.MinimumSize = new System.Drawing.Size(170, 25);
+            this.TotalDepositedLabel.Location = new System.Drawing.Point(387, 569);
+            this.TotalDepositedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalDepositedLabel.MaximumSize = new System.Drawing.Size(255, 38);
+            this.TotalDepositedLabel.MinimumSize = new System.Drawing.Size(255, 38);
             this.TotalDepositedLabel.Name = "TotalDepositedLabel";
-            this.TotalDepositedLabel.Size = new System.Drawing.Size(170, 25);
+            this.TotalDepositedLabel.Size = new System.Drawing.Size(255, 38);
             this.TotalDepositedLabel.TabIndex = 17;
             this.TotalDepositedLabel.Text = "$0.00";
             this.TotalDepositedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(444, 430);
+            this.ClientSize = new System.Drawing.Size(666, 635);
             this.Controls.Add(this.TotalDepositedLabel);
             this.Controls.Add(this.TotalAmountHeader);
             this.Controls.Add(this.IDSelectorPanel);
@@ -402,14 +404,14 @@
             this.Controls.Add(this.CokeCan_Img);
             this.Controls.Add(this.DrPepperCan_Img);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(750, 469);
-            this.MinimumSize = new System.Drawing.Size(460, 469);
+            this.MaximumSize = new System.Drawing.Size(1114, 691);
+            this.MinimumSize = new System.Drawing.Size(679, 691);
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maquina Expendedora";
             this.Load += new System.EventHandler(this.MaquinaExpendedora_Load);
+            this.Enter += new System.EventHandler(this.MainMenu_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.DrPepperCan_Img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CokeCan_Img)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteCan_Img)).EndInit();
