@@ -53,6 +53,7 @@
             this.ID_1 = new System.Windows.Forms.Button();
             this.TotalAmountHeader = new System.Windows.Forms.Label();
             this.TotalDepositedLabel = new System.Windows.Forms.Label();
+            this.WithdrawBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DrPepperCan_Img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CokeCan_Img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SpriteCan_Img)).BeginInit();
@@ -383,12 +384,28 @@
             this.TotalDepositedLabel.Text = "$0.00";
             this.TotalDepositedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // WithdrawBtn
+            // 
+            this.WithdrawBtn.BackColor = System.Drawing.Color.Silver;
+            this.WithdrawBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WithdrawBtn.ForeColor = System.Drawing.Color.Black;
+            this.WithdrawBtn.Location = new System.Drawing.Point(418, 455);
+            this.WithdrawBtn.Name = "WithdrawBtn";
+            this.WithdrawBtn.Size = new System.Drawing.Size(206, 55);
+            this.WithdrawBtn.TabIndex = 18;
+            this.WithdrawBtn.Text = "Retirar Dinero";
+            this.WithdrawBtn.UseVisualStyleBackColor = false;
+            this.WithdrawBtn.Click += new System.EventHandler(this.WithdrawBtn_Click);
+            this.WithdrawBtn.MouseEnter += new System.EventHandler(this.WithdrawBtn_MouseEnter);
+            this.WithdrawBtn.MouseLeave += new System.EventHandler(this.WithdrawBtn_MouseLeave);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(666, 635);
+            this.Controls.Add(this.WithdrawBtn);
             this.Controls.Add(this.TotalDepositedLabel);
             this.Controls.Add(this.TotalAmountHeader);
             this.Controls.Add(this.IDSelectorPanel);
@@ -450,6 +467,7 @@
         private System.Windows.Forms.Button AcceptButton;
         private System.Windows.Forms.Label TotalAmountHeader;
         private System.Windows.Forms.Label TotalDepositedLabel;
+        private System.Windows.Forms.Button WithdrawBtn;
     }
 }
 

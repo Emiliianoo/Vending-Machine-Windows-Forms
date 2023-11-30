@@ -242,5 +242,31 @@ namespace MaquinaExpendedora
             CurrentID.Text = id;
             TotalDepositedLabel.Text = $"${MainControl.TotalAmountDeposited.ToString()}";
         }
+
+        private void WithdrawBtn_Click(object sender, EventArgs e)
+        {   
+            if (MainControl.TotalAmountDeposited <= 0)
+            {
+                MessageBox.Show("Porfavor de ingresar dinero antes de retirar.", "¡Error!",
+                                                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show($"Se ha retirado ${MainControl.TotalAmountDeposited} de forma correcta.", "Retiro con éxito.",
+                                                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MainControl.ClearDepositedAmount();
+            TotalDepositedLabel.Text = "$0";
+            TotalAmountDeposited = 0;
+        }
+
+        private void WithdrawBtn_MouseEnter(object sender, EventArgs e)
+        {
+            WithdrawBtn.BackColor = Color.Firebrick;
+        }
+
+        private void WithdrawBtn_MouseLeave(object sender, EventArgs e)
+        {
+            WithdrawBtn.BackColor = Color.Silver;
+        }
     }
 }

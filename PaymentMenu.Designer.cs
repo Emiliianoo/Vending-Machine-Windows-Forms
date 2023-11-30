@@ -45,8 +45,25 @@
             this.peso5 = new System.Windows.Forms.PictureBox();
             this.peso2 = new System.Windows.Forms.PictureBox();
             this.peso1 = new System.Windows.Forms.PictureBox();
+            this.CreditPaymentPanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.DebitOption = new System.Windows.Forms.RadioButton();
+            this.CreditOption = new System.Windows.Forms.RadioButton();
+            this.CardSelectedLabel = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.DepositAmountTextBox = new System.Windows.Forms.TextBox();
+            this.CardCVVTextBox = new System.Windows.Forms.TextBox();
+            this.CVVLabel = new System.Windows.Forms.Label();
+            this.CreditCardDigitsLabel = new System.Windows.Forms.Label();
+            this.CardNumberTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CardAcceptDepositBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CreditCardBtn = new System.Windows.Forms.Button();
             this.CashPaymentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peso200)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peso100)).BeginInit();
@@ -56,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.peso5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peso2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peso1)).BeginInit();
+            this.CreditPaymentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -289,6 +307,204 @@
             this.peso1.TabStop = false;
             this.peso1.Click += new System.EventHandler(this.peso1_Click);
             // 
+            // CreditPaymentPanel
+            // 
+            this.CreditPaymentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CreditPaymentPanel.Controls.Add(this.label8);
+            this.CreditPaymentPanel.Controls.Add(this.DebitOption);
+            this.CreditPaymentPanel.Controls.Add(this.CreditOption);
+            this.CreditPaymentPanel.Controls.Add(this.CardSelectedLabel);
+            this.CreditPaymentPanel.Controls.Add(this.label9);
+            this.CreditPaymentPanel.Controls.Add(this.label13);
+            this.CreditPaymentPanel.Controls.Add(this.label12);
+            this.CreditPaymentPanel.Controls.Add(this.DepositAmountTextBox);
+            this.CreditPaymentPanel.Controls.Add(this.CardCVVTextBox);
+            this.CreditPaymentPanel.Controls.Add(this.CVVLabel);
+            this.CreditPaymentPanel.Controls.Add(this.CreditCardDigitsLabel);
+            this.CreditPaymentPanel.Controls.Add(this.CardNumberTextBox);
+            this.CreditPaymentPanel.Controls.Add(this.label4);
+            this.CreditPaymentPanel.Controls.Add(this.label7);
+            this.CreditPaymentPanel.Controls.Add(this.CardAcceptDepositBtn);
+            this.CreditPaymentPanel.Location = new System.Drawing.Point(465, 0);
+            this.CreditPaymentPanel.Name = "CreditPaymentPanel";
+            this.CreditPaymentPanel.Size = new System.Drawing.Size(701, 691);
+            this.CreditPaymentPanel.TabIndex = 20;
+            this.CreditPaymentPanel.Visible = false;
+            this.CreditPaymentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CreditPaymentPanel_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(110, 327);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(148, 22);
+            this.label8.TabIndex = 50;
+            this.label8.Text = "Tipo de Tarjeta";
+            // 
+            // DebitOption
+            // 
+            this.DebitOption.AutoSize = true;
+            this.DebitOption.ForeColor = System.Drawing.Color.White;
+            this.DebitOption.Location = new System.Drawing.Point(223, 367);
+            this.DebitOption.Name = "DebitOption";
+            this.DebitOption.Size = new System.Drawing.Size(81, 24);
+            this.DebitOption.TabIndex = 49;
+            this.DebitOption.Text = "Débito";
+            this.DebitOption.UseVisualStyleBackColor = true;
+            this.DebitOption.CheckedChanged += new System.EventHandler(this.DebitOption_CheckedChanged);
+            // 
+            // CreditOption
+            // 
+            this.CreditOption.AutoSize = true;
+            this.CreditOption.Checked = true;
+            this.CreditOption.ForeColor = System.Drawing.Color.White;
+            this.CreditOption.Location = new System.Drawing.Point(114, 367);
+            this.CreditOption.Name = "CreditOption";
+            this.CreditOption.Size = new System.Drawing.Size(85, 24);
+            this.CreditOption.TabIndex = 48;
+            this.CreditOption.TabStop = true;
+            this.CreditOption.Text = "Crédito";
+            this.CreditOption.UseVisualStyleBackColor = true;
+            this.CreditOption.CheckedChanged += new System.EventHandler(this.CreditOption_CheckedChanged);
+            // 
+            // CardSelectedLabel
+            // 
+            this.CardSelectedLabel.AutoSize = true;
+            this.CardSelectedLabel.BackColor = System.Drawing.Color.Azure;
+            this.CardSelectedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CardSelectedLabel.Location = new System.Drawing.Point(392, 358);
+            this.CardSelectedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CardSelectedLabel.MinimumSize = new System.Drawing.Size(200, 25);
+            this.CardSelectedLabel.Name = "CardSelectedLabel";
+            this.CardSelectedLabel.Size = new System.Drawing.Size(200, 33);
+            this.CardSelectedLabel.TabIndex = 26;
+            this.CardSelectedLabel.Text = "Crédito";
+            this.CardSelectedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(380, 324);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(224, 25);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Tarjeta Seleccionada:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(345, 242);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(21, 22);
+            this.label13.TabIndex = 47;
+            this.label13.Text = "$";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(364, 216);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(160, 22);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Monto a Ingresar";
+            // 
+            // DepositAmountTextBox
+            // 
+            this.DepositAmountTextBox.Location = new System.Drawing.Point(368, 241);
+            this.DepositAmountTextBox.Name = "DepositAmountTextBox";
+            this.DepositAmountTextBox.Size = new System.Drawing.Size(198, 26);
+            this.DepositAmountTextBox.TabIndex = 45;
+            // 
+            // CardCVVTextBox
+            // 
+            this.CardCVVTextBox.Location = new System.Drawing.Point(114, 241);
+            this.CardCVVTextBox.Name = "CardCVVTextBox";
+            this.CardCVVTextBox.Size = new System.Drawing.Size(98, 26);
+            this.CardCVVTextBox.TabIndex = 44;
+            // 
+            // CVVLabel
+            // 
+            this.CVVLabel.AutoSize = true;
+            this.CVVLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CVVLabel.ForeColor = System.Drawing.Color.White;
+            this.CVVLabel.Location = new System.Drawing.Point(110, 216);
+            this.CVVLabel.Name = "CVVLabel";
+            this.CVVLabel.Size = new System.Drawing.Size(198, 22);
+            this.CVVLabel.TabIndex = 33;
+            this.CVVLabel.Text = "Código de Seguridad";
+            // 
+            // CreditCardDigitsLabel
+            // 
+            this.CreditCardDigitsLabel.AutoSize = true;
+            this.CreditCardDigitsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreditCardDigitsLabel.ForeColor = System.Drawing.Color.White;
+            this.CreditCardDigitsLabel.Location = new System.Drawing.Point(110, 151);
+            this.CreditCardDigitsLabel.Name = "CreditCardDigitsLabel";
+            this.CreditCardDigitsLabel.Size = new System.Drawing.Size(170, 22);
+            this.CreditCardDigitsLabel.TabIndex = 31;
+            this.CreditCardDigitsLabel.Text = "Número de tarjeta";
+            // 
+            // CardNumberTextBox
+            // 
+            this.CardNumberTextBox.Location = new System.Drawing.Point(114, 174);
+            this.CardNumberTextBox.Name = "CardNumberTextBox";
+            this.CardNumberTextBox.Size = new System.Drawing.Size(468, 26);
+            this.CardNumberTextBox.TabIndex = 30;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(218, 533);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(246, 29);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Completar Deposito";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(256, 73);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(190, 29);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Ingresar Datos:";
+            // 
+            // CardAcceptDepositBtn
+            // 
+            this.CardAcceptDepositBtn.BackColor = System.Drawing.Color.Silver;
+            this.CardAcceptDepositBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CardAcceptDepositBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CardAcceptDepositBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CardAcceptDepositBtn.Location = new System.Drawing.Point(302, 449);
+            this.CardAcceptDepositBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CardAcceptDepositBtn.Name = "CardAcceptDepositBtn";
+            this.CardAcceptDepositBtn.Size = new System.Drawing.Size(82, 85);
+            this.CardAcceptDepositBtn.TabIndex = 26;
+            this.CardAcceptDepositBtn.Text = "✓";
+            this.CardAcceptDepositBtn.UseVisualStyleBackColor = false;
+            this.CardAcceptDepositBtn.Click += new System.EventHandler(this.CardAcceptDepositBtn_Click);
+            this.CardAcceptDepositBtn.MouseEnter += new System.EventHandler(this.CardAcceptDepositBtn_MouseEnter);
+            this.CardAcceptDepositBtn.MouseLeave += new System.EventHandler(this.CardAcceptDepositBtn_MouseLeave);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -313,12 +529,29 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // CreditCardBtn
+            // 
+            this.CreditCardBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CreditCardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreditCardBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreditCardBtn.ForeColor = System.Drawing.Color.Black;
+            this.CreditCardBtn.Location = new System.Drawing.Point(79, 226);
+            this.CreditCardBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CreditCardBtn.Name = "CreditCardBtn";
+            this.CreditCardBtn.Size = new System.Drawing.Size(281, 83);
+            this.CreditCardBtn.TabIndex = 22;
+            this.CreditCardBtn.Text = "TARJETA DE CRÉDITO O DÉBITO";
+            this.CreditCardBtn.UseVisualStyleBackColor = false;
+            this.CreditCardBtn.Click += new System.EventHandler(this.CreditCardBtn_Click);
+            // 
             // PaymentMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(454, 688);
+            this.Controls.Add(this.CreditPaymentPanel);
+            this.Controls.Add(this.CreditCardBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CashPaymentPanel);
@@ -339,6 +572,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.peso5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peso2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peso1)).EndInit();
+            this.CreditPaymentPanel.ResumeLayout(false);
+            this.CreditPaymentPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -365,5 +600,22 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel CreditPaymentPanel;
+        private System.Windows.Forms.Button CreditCardBtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button CardAcceptDepositBtn;
+        private System.Windows.Forms.Label CVVLabel;
+        private System.Windows.Forms.Label CreditCardDigitsLabel;
+        private System.Windows.Forms.TextBox CardNumberTextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox DepositAmountTextBox;
+        private System.Windows.Forms.TextBox CardCVVTextBox;
+        private System.Windows.Forms.Label CardSelectedLabel;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RadioButton DebitOption;
+        private System.Windows.Forms.RadioButton CreditOption;
+        private System.Windows.Forms.Label label7;
     }
 }
