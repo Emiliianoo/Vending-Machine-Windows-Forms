@@ -15,8 +15,8 @@ namespace MaquinaExpendedora
     {
         private MainMenu MenuPrincipal = null;
         private int CashAmount = 0;
-        private static List<decimal> creditCard = new List<decimal> { 2957376894657890, 523, 400}; // Card number, CVV, Card Limit Left
-        private static List<decimal> debitCard = new List<decimal> { 2957376894657890, 325, 10 }; // Card number, CVV, Card Amount
+        private static List<decimal> creditCard = new List<decimal> { 2957376894657890, 523, 400}; // Card number, NIP, Card Limit Left
+        private static List<decimal> debitCard = new List<decimal> { 2957376894657890, 325, 10 }; // Card number, NIP, Card Amount
         private static int creditCardFailedAttemps = 0;
         private static int debitCardFailedAttemps = 0;
 
@@ -259,6 +259,14 @@ namespace MaquinaExpendedora
 
         private bool validDebitCard(long cardNumber, int cardCVV, decimal amount)
         {
+            if(cardNumber != debitCard[0] || cardCVV != debitCard[1])
+            {
+                MessageBox.Show($"Número de tarjeta, NIP incorrecto.", "Dinero regresado.",
+                                                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                debitCardFailedAttemps++;
+                return false;
+            }
+
             if (amount > debitCard[2])
             {
                 MessageBox.Show($"Fondos insuficientes.", "Fondos Insuficientes.",
@@ -267,19 +275,19 @@ namespace MaquinaExpendedora
                 return false;
             }
 
-            if (cardNumber == debitCard[0] && cardCVV == debitCard[1])
-            {
-                return true;
-            }
-
-            MessageBox.Show($"Número de tarjeta, CVV incorrecto.", "Dinero regresado.",
-                                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-            debitCardFailedAttemps++;
-            return false;
+            return true;
         }
 
         private bool validCreditCard(long cardNumber, int cardCVV, decimal amount)
         {
+            if(cardNumber != creditCard[0] || cardCVV != creditCard[1])
+            {
+                MessageBox.Show($"Número de tarjeta, NIP incorrecto.", "Dinero regresado.",
+                                                                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                creditCardFailedAttemps++;
+                return false;
+            }
+
             if(amount > creditCard[2])
             {
                 MessageBox.Show($"Fondos insuficientes.", "Fondos Insuficientes.",
@@ -289,15 +297,7 @@ namespace MaquinaExpendedora
                 return false;
             }
 
-            if(cardNumber == creditCard[0] && cardCVV == creditCard[1])
-            {
-                return true;
-            }
-
-            MessageBox.Show($"Número de tarjeta, CVV incorrecto.", "Dinero regresado.",
-                                       MessageBoxButtons.OK, MessageBoxIcon.Error);
-            creditCardFailedAttemps++;
-            return false;
+            return true;
         }
 
         private void CreditPaymentPanel_Paint(object sender, PaintEventArgs e)

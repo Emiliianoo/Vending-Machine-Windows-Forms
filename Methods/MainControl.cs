@@ -30,7 +30,7 @@ namespace MaquinaExpendedora.Methods
             { "2B", (22.00, 3, "Ruffles") },
             { "3B", (23.00, 2, "Sabritas") },
             { "1C", (25.00, 1, "Gansito") },
-            { "2C", (24.00, 5, "Barritas") },
+            { "2C", (24.00, 5, "Chokis") },
             { "3C", (25.00, 3, "Chocorroles") }
         };  
 

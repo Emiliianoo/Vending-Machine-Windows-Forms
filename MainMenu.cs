@@ -16,6 +16,7 @@ namespace MaquinaExpendedora
         bool toggleIDMenu = false;
         private double TotalAmountDeposited = 0;
         private PaymentMenu paymentMenu = null;
+        private AdminPage adminPage = null;
 
         public void ModifyIDlabel()
         {
@@ -41,7 +42,37 @@ namespace MaquinaExpendedora
 
         private void MaquinaExpendedora_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void UpdateLabels()
+        {
+            CokeCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            CokeCanPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+
+            SpriteCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            SpriteCanPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+
+            PepsiCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            PepsiCanPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+
+            DrPepperCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            DrPepperCanPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+
+            RufflesAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            RufflesPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+
+            SabritasAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            SabritasPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+
+            GansitoAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            GansitoPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+
+            ChokisAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            ChokisPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+
+            ChocorolesAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
+            ChocorolesPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
         }
 
         private void PaymentMenuBtn_Click(object sender, EventArgs e)
@@ -87,7 +118,7 @@ namespace MaquinaExpendedora
             toggleIDMenu = !toggleIDMenu;
 
             Size = new Size(
-                toggleIDMenu ? 750 : 460,
+                toggleIDMenu ? 872 : 588,
                 Size.Height);
 
             IDSelectorPanel.Visible = toggleIDMenu;
@@ -267,6 +298,21 @@ namespace MaquinaExpendedora
         private void WithdrawBtn_MouseLeave(object sender, EventArgs e)
         {
             WithdrawBtn.BackColor = Color.Silver;
+        }
+
+        private void AdminPageBtn_Click(object sender, EventArgs e)
+        {
+            if(adminPage == null)
+            {
+                adminPage = new AdminPage(this);
+                adminPage.Show();
+            }
+            else
+            {
+                adminPage.BringToFront();
+            }
+
+            return;
         }
     }
 }
