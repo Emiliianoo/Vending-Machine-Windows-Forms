@@ -39,6 +39,11 @@ namespace MaquinaExpendedora.Methods
             return _itemsInfo[ID].Price;
         }
 
+        public static double getItemPrice(string id)
+        {
+            return _itemsInfo[id].Price;
+        }
+
         public static string getItemName()
         {
             return _itemsInfo[ID].Name;
@@ -47,6 +52,11 @@ namespace MaquinaExpendedora.Methods
         public static int getItemAmount()
         {
             return _itemsInfo[ID].Amount;
+        }
+
+        public static int getItemAmount(string id)
+        {
+            return _itemsInfo[id].Amount;
         }
 
         public static bool PurchaseOnGoing()
@@ -101,11 +111,34 @@ namespace MaquinaExpendedora.Methods
 
         }
 
+        public static void ChangeItemAmount(string id, int amount)
+        {
+            if (!_itemsInfo.ContainsKey(id)) return;
+
+            var item = _itemsInfo[id];
+            item.Amount = amount;
+            _itemsInfo[id] = item;
+        }
+
+        public static void ChangeItemPrice(string id, double price)
+        {
+            if (!_itemsInfo.ContainsKey(id)) return;
+
+            var item = _itemsInfo[id];
+            item.Price = price;
+            _itemsInfo[id] = item;
+        }
+
         public static void SubtractCashAmount(double amount)
         {
             TotalAmountDeposited -= amount;
             Console.WriteLine(TotalAmountDeposited);
         }
 
+        public static decimal RoundDown(decimal i, double decimalPlaces)
+        {
+            var power = Convert.ToDecimal(Math.Pow(10, decimalPlaces));
+            return Math.Floor(i * power) / power;
+        }   
     }
 }

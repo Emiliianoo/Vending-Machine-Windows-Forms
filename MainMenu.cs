@@ -45,34 +45,34 @@ namespace MaquinaExpendedora
             
         }
 
-        private void UpdateLabels()
+        public void UpdateLabels()
         {
-            CokeCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            CokeCanPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            CokeCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("1A")}";
+            CokeCanPriceLabel.Text = $"${MainControl.getItemPrice("1A")}";
 
-            SpriteCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            SpriteCanPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            SpriteCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("2A")}";
+            SpriteCanPriceLabel.Text = $"${MainControl.getItemPrice("2A")}";
 
-            PepsiCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            PepsiCanPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            PepsiCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("3A")}";
+            PepsiCanPriceLabel.Text = $"${MainControl.getItemPrice("3A")}";
 
-            DrPepperCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            DrPepperCanPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            DrPepperCanAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("1B")}";
+            DrPepperCanPriceLabel.Text = $"${MainControl.getItemPrice("1B")}";
 
-            RufflesAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            RufflesPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            RufflesAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("2B")}";
+            RufflesPriceLabel.Text = $"${MainControl.getItemPrice("2B")}";
 
-            SabritasAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            SabritasPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            SabritasAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("3B")}";
+            SabritasPriceLabel.Text = $"${MainControl.getItemPrice("3B")}";
 
-            GansitoAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            GansitoPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            GansitoAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("1C")}";
+            GansitoPriceLabel.Text = $"${MainControl.getItemPrice("1C")}";
 
-            ChokisAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            ChokisPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            ChokisAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("2C")}";
+            ChokisPriceLabel.Text = $"${MainControl.getItemPrice("2C")}";
 
-            ChocorolesAmountLabel.Text = $"Disponible: {MainControl.getItemAmount()}";
-            ChocorolesPriceLabel.Text = $"Precio: ${MainControl.getItemPrice()}";
+            ChocorolesAmountLabel.Text = $"Disponible: {MainControl.getItemAmount("3C")}";
+            ChocorolesPriceLabel.Text = $"${MainControl.getItemPrice("3C")}";
         }
 
         private void PaymentMenuBtn_Click(object sender, EventArgs e)
@@ -302,10 +302,12 @@ namespace MaquinaExpendedora
 
         private void AdminPageBtn_Click(object sender, EventArgs e)
         {
-            if(adminPage == null)
+            if(MainControl.PurchaseOnGoing()) return;
+
+            if(adminPage == null || adminPage.IsDisposed)
             {
                 adminPage = new AdminPage(this);
-                adminPage.Show();
+                adminPage.Show(this);
             }
             else
             {

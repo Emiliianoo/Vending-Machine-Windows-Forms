@@ -43,6 +43,7 @@
             this.IDSelectorPanel = new System.Windows.Forms.Panel();
             this.AcceptButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.CurrentID = new System.Windows.Forms.Label();
             this.text1 = new System.Windows.Forms.Label();
             this.ID_C = new System.Windows.Forms.Button();
             this.ID_B = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.CokeCanPriceLabel = new System.Windows.Forms.Label();
             this.SpriteCanPriceLabel = new System.Windows.Forms.Label();
             this.PepsiCanPriceLabel = new System.Windows.Forms.Label();
-            this.CurrentID = new System.Windows.Forms.Label();
             this.DrPepperCanPriceLabel = new System.Windows.Forms.Label();
             this.Ruffles_Img = new System.Windows.Forms.PictureBox();
             this.Sabritas_Img = new System.Windows.Forms.PictureBox();
@@ -280,6 +280,18 @@
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             this.DeleteButton.MouseEnter += new System.EventHandler(this.DeleteButton_MouseEnter);
             this.DeleteButton.MouseLeave += new System.EventHandler(this.DeleteButton_MouseLeave);
+            // 
+            // CurrentID
+            // 
+            this.CurrentID.AutoSize = true;
+            this.CurrentID.BackColor = System.Drawing.Color.Azure;
+            this.CurrentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentID.Location = new System.Drawing.Point(81, 41);
+            this.CurrentID.MinimumSize = new System.Drawing.Size(100, 35);
+            this.CurrentID.Name = "CurrentID";
+            this.CurrentID.Size = new System.Drawing.Size(100, 35);
+            this.CurrentID.TabIndex = 13;
+            this.CurrentID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // text1
             // 
@@ -504,18 +516,6 @@
             this.PepsiCanPriceLabel.Size = new System.Drawing.Size(25, 13);
             this.PepsiCanPriceLabel.TabIndex = 25;
             this.PepsiCanPriceLabel.Text = "$20";
-            // 
-            // CurrentID
-            // 
-            this.CurrentID.AutoSize = true;
-            this.CurrentID.BackColor = System.Drawing.Color.Azure;
-            this.CurrentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentID.Location = new System.Drawing.Point(81, 41);
-            this.CurrentID.MinimumSize = new System.Drawing.Size(100, 35);
-            this.CurrentID.Name = "CurrentID";
-            this.CurrentID.Size = new System.Drawing.Size(100, 35);
-            this.CurrentID.TabIndex = 13;
-            this.CurrentID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DrPepperCanPriceLabel
             // 

@@ -310,7 +310,7 @@
             this.CreditPaymentPanel.Controls.Add(this.label7);
             this.CreditPaymentPanel.Controls.Add(this.CardAcceptDepositBtn);
             this.CreditPaymentPanel.Location = new System.Drawing.Point(310, 0);
-            this.CreditPaymentPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreditPaymentPanel.Margin = new System.Windows.Forms.Padding(2);
             this.CreditPaymentPanel.Name = "CreditPaymentPanel";
             this.CreditPaymentPanel.Size = new System.Drawing.Size(467, 449);
             this.CreditPaymentPanel.TabIndex = 20;
@@ -334,7 +334,7 @@
             this.DebitOption.AutoSize = true;
             this.DebitOption.ForeColor = System.Drawing.Color.White;
             this.DebitOption.Location = new System.Drawing.Point(149, 239);
-            this.DebitOption.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DebitOption.Margin = new System.Windows.Forms.Padding(2);
             this.DebitOption.Name = "DebitOption";
             this.DebitOption.Size = new System.Drawing.Size(56, 17);
             this.DebitOption.TabIndex = 49;
@@ -348,7 +348,7 @@
             this.CreditOption.Checked = true;
             this.CreditOption.ForeColor = System.Drawing.Color.White;
             this.CreditOption.Location = new System.Drawing.Point(76, 239);
-            this.CreditOption.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreditOption.Margin = new System.Windows.Forms.Padding(2);
             this.CreditOption.Name = "CreditOption";
             this.CreditOption.Size = new System.Drawing.Size(58, 17);
             this.CreditOption.TabIndex = 48;
@@ -409,7 +409,7 @@
             // DepositAmountTextBox
             // 
             this.DepositAmountTextBox.Location = new System.Drawing.Point(245, 157);
-            this.DepositAmountTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DepositAmountTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DepositAmountTextBox.Name = "DepositAmountTextBox";
             this.DepositAmountTextBox.Size = new System.Drawing.Size(133, 20);
             this.DepositAmountTextBox.TabIndex = 45;
@@ -417,7 +417,7 @@
             // CardCVVTextBox
             // 
             this.CardCVVTextBox.Location = new System.Drawing.Point(76, 157);
-            this.CardCVVTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CardCVVTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CardCVVTextBox.Name = "CardCVVTextBox";
             this.CardCVVTextBox.Size = new System.Drawing.Size(67, 20);
             this.CardCVVTextBox.TabIndex = 44;
@@ -449,7 +449,7 @@
             // CardNumberTextBox
             // 
             this.CardNumberTextBox.Location = new System.Drawing.Point(76, 113);
-            this.CardNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CardNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CardNumberTextBox.Name = "CardNumberTextBox";
             this.CardNumberTextBox.Size = new System.Drawing.Size(313, 20);
             this.CardNumberTextBox.TabIndex = 30;
@@ -543,7 +543,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CashPaymentPanel);
             this.Controls.Add(this.CashBtn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(792, 497);
             this.MinimumSize = new System.Drawing.Size(323, 497);
             this.Name = "PaymentMenu";

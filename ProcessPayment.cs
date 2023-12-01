@@ -63,6 +63,7 @@ namespace MaquinaExpendedora
                 menu.ModifyIDlabel();
                 menu.ModifyDepositedLabel();
 
+                menu.UpdateLabels();
                 this.Close();
             }
             progressBar.Increment(20);
