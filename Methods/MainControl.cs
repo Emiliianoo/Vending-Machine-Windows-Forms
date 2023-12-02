@@ -9,6 +9,7 @@ namespace MaquinaExpendedora.Methods
 {
     internal static class MainControl
     {
+        private static bool adminInspectOpen = false;
         private static bool IDLocked = false;
         private static double _totalAmountDeposited = 0;
         public static string ID { get; private set; } = "";
@@ -67,6 +68,16 @@ namespace MaquinaExpendedora.Methods
         public static void ToggleIDLock()
         {
             IDLocked = !IDLocked;
+        }
+
+        public static void ToggleAdminInspect()
+        {
+            adminInspectOpen = !adminInspectOpen;
+        }
+
+        public static bool AdminInspectOpen()
+        {
+            return adminInspectOpen;
         }
 
         public static void AddCashAmount(double amount)

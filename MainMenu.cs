@@ -208,6 +208,15 @@ namespace MaquinaExpendedora
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
+            if(MainControl.AdminInspectOpen())
+            {
+                MessageBox.Show("Porfavor de cerrar la ventana de administrador antes de continuar.", "¡Error!",
+                                                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(MainControl.PurchaseOnGoing()) return;
+
             MainControl.ToggleIDLock();
             if (MainControl.ID == "")
             {
@@ -224,6 +233,7 @@ namespace MaquinaExpendedora
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MainControl.ToggleIDLock();
                 MainControl.ClearID();
+                CurrentID.Text = "";
                 return;
             }
 
@@ -283,7 +293,8 @@ namespace MaquinaExpendedora
                 return;
             }
 
-            MessageBox.Show($"Se ha retirado ${MainControl.TotalAmountDeposited} de forma correcta.", "Retiro con éxito.",
+            ToggleIDMenu();
+            MessageBox.Show($"Se ha retirado ${MainControl.TotalAmountDeposited} en efectivo de forma correcta.", "Retiro con éxito.",
                                                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
             MainControl.ClearDepositedAmount();
             TotalDepositedLabel.Text = "$0";

@@ -36,6 +36,7 @@ namespace MaquinaExpendedora
                 timer1.Stop();
                 await Task.Delay(1000);
                 double change = MainControl.TotalAmountDeposited - MainControl.getItemPrice();
+                change = (double)MainControl.RoundDown((decimal)change, 2);
                 MainControl.DispenseItem();
                 MainControl.SubtractCashAmount(MainControl.getItemPrice());
                 if (change > 0)

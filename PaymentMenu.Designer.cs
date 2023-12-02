@@ -537,12 +537,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(307, 458);
-            this.Controls.Add(this.CreditPaymentPanel);
             this.Controls.Add(this.CreditCardBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.CashPaymentPanel);
             this.Controls.Add(this.CashBtn);
+            this.Controls.Add(this.CreditPaymentPanel);
+            this.Controls.Add(this.CashPaymentPanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(792, 497);
             this.MinimumSize = new System.Drawing.Size(323, 497);

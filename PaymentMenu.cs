@@ -16,7 +16,7 @@ namespace MaquinaExpendedora
         private MainMenu MenuPrincipal = null;
         private int CashAmount = 0;
         private static List<decimal> creditCard = new List<decimal> { 2957376894657890, 523, 400}; // Card number, NIP, Card Limit Left
-        private static List<decimal> debitCard = new List<decimal> { 2957376894657890, 325, 10 }; // Card number, NIP, Card Amount
+        private static List<decimal> debitCard = new List<decimal> { 9638575828451275, 325, 10 }; // Card number, NIP, Card Amount
         private static int creditCardFailedAttemps = 0;
         private static int debitCardFailedAttemps = 0;
 
@@ -115,10 +115,22 @@ namespace MaquinaExpendedora
 
         private void DeleteButtonCash_Click(object sender, EventArgs e)
         {
-            CashAmount = 0;
+            if(CashAmount == 0)
+            {
+                MessageBox.Show($"No hay dinero que retirar.", "Error.",
+                                                                                                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ReturnMoney();
+        }
+
+        private void ReturnMoney()
+        {
             CashAmountLabel.Text = "$0.00";
-            MessageBox.Show("Se ha retirado el dinero ingresado de forma correcta.", "Retiro con éxito.",
+            MessageBox.Show($"Se ha retirado ${CashAmount} de forma correcta.", "Retiro con éxito.",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CashAmount = 0;
         }
 
         private void AcceptButtonCash_MouseEnter(object sender, EventArgs e)
@@ -133,6 +145,31 @@ namespace MaquinaExpendedora
 
         private void AcceptButtonCash_Click(object sender, EventArgs e)
         {
+            if(MainControl.AdminInspectOpen())
+            {
+                MessageBox.Show($"Porfavor cerrar la ventana de administrador antes de continuar.", "Error.",
+                                                                                                                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if(CashAmount != 0)
+                {
+                    ReturnMoney();
+                }
+                return;
+            }
+
+            if(MainControl.PurchaseOnGoing())
+            {
+                MessageBox.Show($"Porfavor esperar a que se termine la compra actual.", "Error.",
+                                                                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(CashAmount == 0)
+            {
+                MessageBox.Show($"Porfavor ingresar dinero antes de continuar.", "Error.",
+                                                                                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             MainControl.AddCashAmount(CashAmount);
             MessageBox.Show($"Se ha depositado ${CashAmount.ToString()} de forma correcta.", "Depósito con éxito.",
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -168,6 +205,20 @@ namespace MaquinaExpendedora
 
         private void CardAcceptDepositBtn_Click(object sender, EventArgs e)
         {
+            if(MainControl.AdminInspectOpen())
+            {
+                MessageBox.Show($"Porfavor cerrar la ventana de administrador antes de continuar.", "Error.",
+                                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if(MainControl.PurchaseOnGoing())
+            {
+                MessageBox.Show($"Porfavor esperar a que se termine la compra actual.", "Error.",
+                                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 long cardNumber = long.Parse(CardNumberTextBox.Text);
@@ -193,6 +244,7 @@ namespace MaquinaExpendedora
 
                     if (validCreditCard(cardNumber, cardCVV, amount))
                     {
+                        amount = MainControl.RoundDown(amount, 2);
                         creditCard[2] -= amount;
                         MainControl.AddCashAmount((double)amount);
                         MessageBox.Show($"Se ha depositado ${amount.ToString()} de forma correcta.", "Depósito con éxito.",
@@ -227,6 +279,7 @@ namespace MaquinaExpendedora
 
                     if (validDebitCard(cardNumber, cardCVV, amount))
                     {
+                        amount = MainControl.RoundDown(amount, 2);
                         debitCard[2] -= amount;
                         MainControl.AddCashAmount((double)amount);
                         MessageBox.Show($"Se ha depositado ${amount.ToString()} de forma correcta.", "Depósito con éxito.",

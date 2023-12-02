@@ -110,13 +110,13 @@
             this.CokeCan_Img = new System.Windows.Forms.PictureBox();
             this.ItemViewHeader = new System.Windows.Forms.Label();
             this.PasswordChangePanel = new System.Windows.Forms.Panel();
+            this.ReturnBtn3 = new System.Windows.Forms.Button();
             this.ConfirmChangeBtn = new System.Windows.Forms.Button();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.NewPasswordTextBox = new System.Windows.Forms.TextBox();
             this.OldPasswordTextBox = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.ReturnBtn3 = new System.Windows.Forms.Button();
             this.AdminLoginPanel.SuspendLayout();
             this.ManagePanel.SuspendLayout();
             this.ItemViewPanel.SuspendLayout();
@@ -1133,6 +1133,20 @@
             this.PasswordChangePanel.TabIndex = 13;
             this.PasswordChangePanel.Visible = false;
             // 
+            // ReturnBtn3
+            // 
+            this.ReturnBtn3.BackColor = System.Drawing.Color.Silver;
+            this.ReturnBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnBtn3.ForeColor = System.Drawing.Color.Black;
+            this.ReturnBtn3.Location = new System.Drawing.Point(9, 408);
+            this.ReturnBtn3.Margin = new System.Windows.Forms.Padding(2);
+            this.ReturnBtn3.Name = "ReturnBtn3";
+            this.ReturnBtn3.Size = new System.Drawing.Size(111, 36);
+            this.ReturnBtn3.TabIndex = 20;
+            this.ReturnBtn3.Text = "Regresar";
+            this.ReturnBtn3.UseVisualStyleBackColor = false;
+            this.ReturnBtn3.Click += new System.EventHandler(this.ReturnBtn3_Click);
+            // 
             // ConfirmChangeBtn
             // 
             this.ConfirmChangeBtn.BackColor = System.Drawing.Color.Silver;
@@ -1182,6 +1196,7 @@
             this.OldPasswordTextBox.Name = "OldPasswordTextBox";
             this.OldPasswordTextBox.Size = new System.Drawing.Size(200, 20);
             this.OldPasswordTextBox.TabIndex = 11;
+            this.OldPasswordTextBox.TextChanged += new System.EventHandler(this.OldPasswordTextBox_TextChanged);
             // 
             // label35
             // 
@@ -1194,34 +1209,21 @@
             this.label35.TabIndex = 10;
             this.label35.Text = "Cambiar la contraseña";
             // 
-            // ReturnBtn3
-            // 
-            this.ReturnBtn3.BackColor = System.Drawing.Color.Silver;
-            this.ReturnBtn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnBtn3.ForeColor = System.Drawing.Color.Black;
-            this.ReturnBtn3.Location = new System.Drawing.Point(9, 408);
-            this.ReturnBtn3.Margin = new System.Windows.Forms.Padding(2);
-            this.ReturnBtn3.Name = "ReturnBtn3";
-            this.ReturnBtn3.Size = new System.Drawing.Size(111, 36);
-            this.ReturnBtn3.TabIndex = 20;
-            this.ReturnBtn3.Text = "Regresar";
-            this.ReturnBtn3.UseVisualStyleBackColor = false;
-            this.ReturnBtn3.Click += new System.EventHandler(this.ReturnBtn3_Click);
-            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(361, 450);
-            this.Controls.Add(this.PasswordChangePanel);
             this.Controls.Add(this.ManagePanel);
             this.Controls.Add(this.AdminLoginPanel);
             this.Controls.Add(this.ItemViewPanel);
+            this.Controls.Add(this.PasswordChangePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximumSize = new System.Drawing.Size(848, 489);
             this.MinimumSize = new System.Drawing.Size(377, 489);
             this.Name = "AdminPage";
             this.Text = "Administradores";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);
             this.Load += new System.EventHandler(this.AdminPage_Load);
             this.AdminLoginPanel.ResumeLayout(false);
             this.AdminLoginPanel.PerformLayout();

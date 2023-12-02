@@ -15,7 +15,7 @@ namespace MaquinaExpendedora
     {
         private MainMenu menu = null;
         private static string username = "admin";
-        private static string password = "admin";
+        private static string password = "12345";
 
         public AdminPage()
         {
@@ -86,6 +86,7 @@ namespace MaquinaExpendedora
 
         private void InspectBtn_Click(object sender, EventArgs e)
         {
+            MainControl.ToggleAdminInspect();
             ManagePanel.Visible = false;
             ItemViewPanel.Visible = true;
             Size = new Size(848, Size.Height);
@@ -171,11 +172,19 @@ namespace MaquinaExpendedora
 
         private void FinishBtn_Click(object sender, EventArgs e)
         {
+            if(MainControl.AdminInspectOpen())
+            {
+                MainControl.ToggleAdminInspect();
+            }
             this.Close();
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
+            if(MainControl.AdminInspectOpen())
+            {
+                MainControl.ToggleAdminInspect();
+            }
             ItemViewPanel.Visible = false;
             ManagePanel.Visible = true;
             Size = new Size(377, Size.Height);
@@ -240,6 +249,19 @@ namespace MaquinaExpendedora
         {
             PasswordChangePanel.Visible = false;
             ManagePanel.Visible = true;
+        }
+
+        private void OldPasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(MainControl.AdminInspectOpen())
+            {
+                MainControl.ToggleAdminInspect();
+            }
         }
     }
 }
